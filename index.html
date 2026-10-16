@@ -144,6 +144,25 @@ section{position:relative}
 .hm td.g{background:#D9F2E3;color:#0E5E33}.hm td.a{background:#FBEFD0;color:#7A4B00}.hm td.r{background:#FBDDD5;color:#8F2A17}
 .hm td:last-child{background:var(--ink);color:#fff}
 @media (max-width:860px){.row4{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+/* content calendar (illustrative) */
+.cal{display:grid;grid-template-columns:150px repeat(7,minmax(0,1fr));gap:6px;min-width:900px;font-size:12.5px}
+.cal .hdc{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--fg-3);padding:6px 8px;text-align:center}
+.cal .hdc b{display:block;font-family:var(--display);font-size:15px;letter-spacing:-.01em;color:var(--fg);margin-top:2px}
+.cal .hdc.today{color:var(--accent)}.cal .hdc.today b{color:var(--accent)}
+.cal .acc{display:flex;flex-direction:column;justify-content:center;gap:3px;padding:8px 10px;border-radius:10px;background:#EFEEE9}
+.cal .acc b{font-family:var(--display);font-weight:800;font-size:13.5px;letter-spacing:-.01em}
+.cal .acc span{font-family:var(--mono);font-size:10.5px;color:var(--fg-3);letter-spacing:.06em}
+.cal .acc em{font-style:normal;font-size:11px;color:#0E5E33;font-weight:600}
+.cal .cell{min-height:58px;border-radius:10px;border:1px dashed var(--line);display:flex;flex-direction:column;gap:4px;padding:4px}
+.cal .cell.today{border-color:var(--accent);border-style:solid;background:rgba(47,91,255,.04)}
+.cal .slot{border-radius:7px;padding:5px 7px;line-height:1.25;font-weight:600;display:flex;flex-direction:column;gap:1px;opacity:0;transform:translateY(6px);transition:opacity .5s,transform .5s}
+.in .cal .slot{opacity:1;transform:none}
+.cal .slot small{font-family:var(--mono);font-size:10px;font-weight:500;letter-spacing:.04em;opacity:.75}
+.cal .slot.ig{background:#EDE4FF;color:#4A1F9E}.cal .slot.yt{background:#FBDDD5;color:#8F2A17}.cal .slot.tt{background:#DFF6F4;color:#0E5252}.cal .slot.th{background:#E8E8E8;color:#222}.cal .slot.tg{background:#DCEBFF;color:#0F3C8A}.cal .slot.fb{background:#DDE7FB;color:#1B3F8F}
+.cal .slot.done::after{content:"✓ published";font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;color:#0E5E33;font-weight:600}
+.cal .slot.auto::after{content:"auto · engine";font-family:var(--mono);font-size:9.5px;letter-spacing:.06em;opacity:.7}
+.cal-legend{display:flex;flex-wrap:wrap;gap:10px 18px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-3)}
+.cal-legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
 .ba{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .ba .card{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);padding:30px;display:flex;flex-direction:column;gap:16px;min-width:0}
 .ba .card.after{border-color:var(--accent);box-shadow:0 30px 70px -30px rgba(47,91,255,.35)}
@@ -227,7 +246,7 @@ footer .brand{color:#fff}
   <div class="wrap">
     <a href="#top" class="brand"><i></i>LAYSHA SYSTEMS</a>
     <nav class="links" aria-label="Sections">
-      <a href="#case">Case</a><a href="#build">What I build</a><a href="#services">Services</a><a href="#about">About</a>
+      <a href="#case">Case</a><a href="#calendar">Calendar</a><a href="#build">What I build</a><a href="#services">Services</a><a href="#about">About</a>
     </nav>
     <a href="#contact" class="btn pri" style="min-height:44px;padding:0 18px;font-size:14px">Book a walkthrough</a>
   </div>
@@ -465,6 +484,80 @@ footer .brand{color:#fff}
           <text x="470" y="384">OVERDUE</text><text x="690" y="384" text-anchor="end" fill="#FF8A70" font-size="16" font-family="Archivo,sans-serif" font-weight="800">2,198 → 0</text>
         </g>
       </svg>
+    </div>
+  </div>
+</section>
+
+<section id="calendar" class="sec" style="border-top:1px solid var(--line)">
+  <div class="wrap" style="display:grid;gap:40px">
+    <div class="sec-head rv">
+      <span class="mono eyebrow">One calendar · every account, every channel</span>
+      <h2 class="h">The team stopped asking what goes out tomorrow.</h2>
+      <p>Every account on one week. Scheduled posts, what the engine generated, what a human dropped in from the team chat, and what already went live — with yesterday's follower delta next to each account. Illustrative data; the real one runs on a client's domain.</p>
+    </div>
+    <div class="chart rv" style="overflow:hidden">
+      <div class="hd"><h3>Week 42 · 6 accounts · 31 posts scheduled</h3><span class="cal-legend"><span><i style="background:#C9B5FF"></i>Instagram</span><span><i style="background:#F5B3A5"></i>YouTube</span><span><i style="background:#9FDDD8"></i>TikTok</span><span><i style="background:#CFCFCF"></i>Threads</span><span><i style="background:#A9C8FF"></i>Telegram</span><span><i style="background:#B4C6F0"></i>Facebook</span></span></div>
+      <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+        <div class="cal" role="table" aria-label="Illustrative content calendar: six accounts across one week">
+          <div class="hdc" style="text-align:left">Account</div>
+          <div class="hdc">Mon<b>13</b></div><div class="hdc">Tue<b>14</b></div><div class="hdc">Wed<b>15</b></div><div class="hdc today">Thu<b>16</b></div><div class="hdc">Fri<b>17</b></div><div class="hdc">Sat<b>18</b></div><div class="hdc">Sun<b>19</b></div>
+
+          <div class="acc"><b>@brand</b><span>INSTAGRAM</span><em>+412 yesterday</em></div>
+          <div class="cell"><div class="slot ig done">Reel · drop teaser<small>09:00</small></div></div>
+          <div class="cell"><div class="slot ig done auto">Carousel · 6 looks<small>12:30</small></div></div>
+          <div class="cell"><div class="slot ig done">Stories · restock<small>10:00</small></div></div>
+          <div class="cell today"><div class="slot ig">Reel · founder talks<small>18:00</small></div><div class="slot ig auto">Carousel · sizes<small>12:30</small></div></div>
+          <div class="cell"><div class="slot ig">Reel · UGC cut<small>17:00</small></div></div>
+          <div class="cell"><div class="slot ig auto">Carousel · sale<small>11:00</small></div></div>
+          <div class="cell"></div>
+
+          <div class="acc"><b>@founder</b><span>INSTAGRAM</span><em>+96 yesterday</em></div>
+          <div class="cell"></div>
+          <div class="cell"><div class="slot ig done">Reel · behind the set<small>19:00</small></div></div>
+          <div class="cell"></div>
+          <div class="cell today"><div class="slot ig">Stories · Q&amp;A<small>20:00</small></div></div>
+          <div class="cell"><div class="slot ig">Reel · podcast clip 03<small>19:00</small></div></div>
+          <div class="cell"></div>
+          <div class="cell"><div class="slot ig">Reel · week recap<small>18:00</small></div></div>
+
+          <div class="acc"><b>Brand channel</b><span>YOUTUBE</span><em>+1,210 yesterday</em></div>
+          <div class="cell"><div class="slot yt done">Short · clip 01<small>15:00</small></div></div>
+          <div class="cell"><div class="slot yt done">Short · clip 02<small>15:00</small></div></div>
+          <div class="cell"><div class="slot yt done">Podcast · ep. 14<small>17:00</small></div></div>
+          <div class="cell today"><div class="slot yt">Short · clip 03<small>15:00</small></div></div>
+          <div class="cell"><div class="slot yt">Short · clip 04<small>15:00</small></div></div>
+          <div class="cell"><div class="slot yt">Short · clip 05<small>15:00</small></div></div>
+          <div class="cell"></div>
+
+          <div class="acc"><b>@brand</b><span>TIKTOK</span><em>+2,340 yesterday</em></div>
+          <div class="cell"><div class="slot tt done">Clip 01 · hook A<small>13:00</small></div></div>
+          <div class="cell"><div class="slot tt done">Clip 02<small>13:00</small></div></div>
+          <div class="cell"><div class="slot tt done">Clip 03 · duet<small>13:00</small></div></div>
+          <div class="cell today"><div class="slot tt">Clip 04<small>13:00</small></div><div class="slot tt">Clip 05 · hook B<small>19:00</small></div></div>
+          <div class="cell"><div class="slot tt">Clip 06<small>13:00</small></div></div>
+          <div class="cell"><div class="slot tt">Clip 07<small>13:00</small></div></div>
+          <div class="cell"><div class="slot tt">Clip 08 · best of<small>13:00</small></div></div>
+
+          <div class="acc"><b>@brand</b><span>THREADS</span><em>+58 yesterday</em></div>
+          <div class="cell"><div class="slot th done">Text · opinion<small>08:30</small></div></div>
+          <div class="cell"></div>
+          <div class="cell"><div class="slot th done">Text · thread ×5<small>08:30</small></div></div>
+          <div class="cell today"><div class="slot th">Text · poll<small>08:30</small></div></div>
+          <div class="cell"></div>
+          <div class="cell"><div class="slot th">Text · story<small>10:00</small></div></div>
+          <div class="cell"></div>
+
+          <div class="acc"><b>Brand channel</b><span>TELEGRAM · FACEBOOK</span><em>+31 yesterday</em></div>
+          <div class="cell"><div class="slot tg done">Post · drop + link<small>10:00</small></div></div>
+          <div class="cell"><div class="slot fb done auto">Cross-post · carousel<small>12:40</small></div></div>
+          <div class="cell"></div>
+          <div class="cell today"><div class="slot tg">Post · founder reel<small>18:10</small></div><div class="slot fb auto">Cross-post · carousel<small>12:40</small></div></div>
+          <div class="cell"></div>
+          <div class="cell"><div class="slot tg">Post · sale<small>11:00</small></div></div>
+          <div class="cell"></div>
+        </div>
+      </div>
+      <p style="margin:0;font-size:15px;color:var(--fg-2)">What the owner sees at 9 a.m.: which account has a hole this week, what the engine already prepared, and which post moved the needle yesterday. Manual posts from the team chat land here too, so nothing gets published twice.</p>
     </div>
   </div>
 </section>
