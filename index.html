@@ -136,6 +136,14 @@ section{position:relative}
 .kpi{background:var(--paper-2);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:4px;min-width:0}
 .kpi .v{font-family:var(--display);font-weight:800;font-size:30px;letter-spacing:-.02em;line-height:1}
 .kpi .k{font-size:13px;color:var(--fg-2)}
+.hm{border-collapse:separate;border-spacing:4px;width:100%;min-width:760px;font-size:13px}
+.hm th{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--fg-3);font-weight:500;text-align:center;padding:6px 4px;white-space:nowrap}
+.hm th:first-child{text-align:left}
+.hm td{text-align:center;padding:9px 4px;border-radius:8px;font-weight:600;background:#EFEEE9;color:#2A2D33;min-width:44px}
+.hm td:first-child{text-align:left;font-family:var(--display);font-weight:800;background:transparent;padding-left:6px}
+.hm td.g{background:#D9F2E3;color:#0E5E33}.hm td.a{background:#FBEFD0;color:#7A4B00}.hm td.r{background:#FBDDD5;color:#8F2A17}
+.hm td:last-child{background:var(--ink);color:#fff}
+@media (max-width:860px){.row4{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 .ba{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .ba .card{background:var(--paper-2);border:1px solid var(--line);border-radius:var(--r);padding:30px;display:flex;flex-direction:column;gap:16px;min-width:0}
 .ba .card.after{border-color:var(--accent);box-shadow:0 30px 70px -30px rgba(47,91,255,.35)}
@@ -300,11 +308,32 @@ footer .brand{color:#fff}
     </div>
 
     <div class="chart rv" style="padding-bottom:18px">
-      <div class="hd"><h3>Followers</h3><span class="mono" style="color:var(--fg-3)">151,277 → 165,162</span></div>
+      <div class="hd"><h3>Followers · account one (resale)</h3><span class="mono" style="color:var(--fg-3)">151,277 → 165,162</span></div>
       <svg viewBox="0 0 1160 200" role="img" aria-label="Followers rising from 151 thousand to 165 thousand over 16 weeks">
         <defs><linearGradient id="fg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2F5BFF" stop-opacity=".28"/><stop offset="1" stop-color="#2F5BFF" stop-opacity="0"/></linearGradient></defs>
-        <g id="line"></g>
+        <g id="line" data-series="a"></g>
       </svg>
+    </div>
+
+    <div class="sec-head rv" style="padding-top:24px">
+      <span class="mono eyebrow">Same system · second account · footwear brand</span>
+      <h2 class="h" style="font-size:clamp(30px,4vw,52px)">37,850 → 83,710 followers in four and a half months. Same engine, second brand.</h2>
+      <p>Jun 4 – Oct 15, 2026. The content engine, calendar and distribution pipeline run two brands from one setup. This is the second one.</p>
+    </div>
+
+    <div class="case-grid">
+      <div class="chart rv" style="padding-bottom:18px">
+        <div class="hd"><h3>Followers · account two</h3><span class="mono" style="color:var(--fg-3)">+121% · 20 weeks</span></div>
+        <svg viewBox="0 0 760 260" role="img" aria-label="Followers rising from 38 thousand to 84 thousand over 20 weeks">
+          <g id="line2" data-series="b"></g>
+        </svg>
+      </div>
+      <div class="kpis">
+        <div class="kpi rv d1"><span class="v num" data-count="45.9" data-prefix="+" data-suffix="k" data-dec="1">0</span><span class="k">net followers, 38k → 84k</span></div>
+        <div class="kpi rv d2"><span class="v num" data-count="31.5" data-suffix="M" data-dec="1">0</span><span class="k">views in 20 weeks</span></div>
+        <div class="kpi rv d3"><span class="v num" data-count="21.2" data-suffix="M" data-dec="1">0</span><span class="k">accounts reached</span></div>
+        <div class="kpi rv d4"><span class="v num" data-count="4.1" data-suffix="M" data-dec="1">0</span><span class="k">views in the best week (Oct 5)</span></div>
+      </div>
     </div>
 
     <div class="ba">
@@ -328,6 +357,40 @@ footer .brand{color:#fff}
           <li>Dashboard per manager: waiting, overdue, first response, sales</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="audit" class="sec" style="background:var(--paper-2);border-top:1px solid var(--line)">
+  <div class="wrap" style="display:grid;gap:44px">
+    <div class="sec-head rv">
+      <span class="mono eyebrow">Sales audit · what the diagnostic looks like</span>
+      <h2 class="h">I read 170,000 messages so the owner didn't have to.</h2>
+      <p>Three months of a seven-channel sales team, every conversation, end to end. Not a survey, not a sample. The output is a number per manager, a number per skill, and the exact place money leaks.</p>
+    </div>
+    <div class="row4" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px">
+      <div class="kpi rv"><span class="v num" data-count="3455">0</span><span class="k">conversations read, 7 channels, 90 days</span></div>
+      <div class="kpi rv d1"><span class="v num" data-count="30" data-suffix="%">0</span><span class="k">of new leads reached payment · spread 12% → 46% by manager</span></div>
+      <div class="kpi rv d2"><span class="v num" data-count="1034">0</span><span class="k">went silent after the price and nobody came back</span></div>
+      <div class="kpi rv d3"><span class="v num" data-count="110" data-prefix="+">0</span><span class="k">paid orders per quarter if everyone hits 35%</span></div>
+    </div>
+    <div class="chart rv" style="overflow:hidden">
+      <div class="hd"><h3>Skill matrix · 7 managers × 12 skills, scored from their own conversations</h3><span class="mono" style="color:var(--fg-3)">green 7+ · amber 5–6.9 · red under 5</span></div>
+      <div style="overflow-x:auto;-webkit-overflow-scrolling:touch">
+        <table class="hm num" aria-label="Skill matrix, anonymized">
+          <thead><tr><th>Manager</th><th>Speed</th><th>Tone</th><th>Needs</th><th>Product</th><th>Value</th><th>Objections</th><th>Closing</th><th>Upsell</th><th>Follow-up</th><th>Writing</th><th>Service</th><th>Engagement</th><th>Score</th></tr></thead>
+          <tbody>
+            <tr><td>A</td><td>9.6</td><td>7.6</td><td>5.2</td><td>6.3</td><td>4.5</td><td>4.4</td><td>6.8</td><td>3.8</td><td>4.4</td><td>5.9</td><td>7.2</td><td>7.4</td><td>6.1</td></tr>
+            <tr><td>B</td><td>9.1</td><td>7.1</td><td>5.3</td><td>5.3</td><td>5.7</td><td>4.7</td><td>7.2</td><td>6.2</td><td>5.2</td><td>5.3</td><td>6.5</td><td>7.1</td><td>6.2</td></tr>
+            <tr><td>C</td><td>6.7</td><td>6.7</td><td>5.6</td><td>6.3</td><td>5.2</td><td>4.3</td><td>6.8</td><td>6.4</td><td>5.0</td><td>6.0</td><td>6.6</td><td>7.1</td><td>6.1</td></tr>
+            <tr><td>D</td><td>6.4</td><td>6.4</td><td>4.7</td><td>5.8</td><td>4.1</td><td>3.7</td><td>6.7</td><td>4.8</td><td>3.8</td><td>6.2</td><td>5.9</td><td>5.7</td><td>5.4</td></tr>
+            <tr><td>E</td><td>5.7</td><td>6.8</td><td>5.3</td><td>5.8</td><td>4.1</td><td>3.5</td><td>5.6</td><td>4.8</td><td>4.6</td><td>6.4</td><td>7.1</td><td>5.7</td><td>5.5</td></tr>
+            <tr><td>F</td><td>5.2</td><td>7.0</td><td>5.0</td><td>7.0</td><td>4.0</td><td>3.0</td><td>6.0</td><td>5.0</td><td>3.0</td><td>5.0</td><td>7.0</td><td>6.0</td><td>5.3</td></tr>
+            <tr><td>G</td><td>7.0</td><td>6.1</td><td>5.7</td><td>5.8</td><td>4.3</td><td>4.0</td><td>5.6</td><td>3.4</td><td>3.1</td><td>5.8</td><td>5.7</td><td>5.6</td><td>5.2</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin:0;font-size:15px;color:var(--fg-2)">What the whole team is weakest at: presenting value, handling objections, upselling and following up. That's where the next 110 orders are. Names removed; the owner got the real ones.</p>
     </div>
   </div>
 </section>
@@ -581,19 +644,26 @@ window.LEAD_FORM = window.LEAD_FORM || {action:"", map:{}};
     /* partial last week note */
     var note=document.createElementNS('http://www.w3.org/2000/svg','text');note.setAttribute('x',W-pad.r);note.setAttribute('y',12);note.setAttribute('text-anchor','end');note.setAttribute('font-family','IBM Plex Mono,monospace');note.setAttribute('font-size','10');note.setAttribute('fill','#8A8D95');note.textContent='last bar = partial week';bars.appendChild(note);
   }
-  var line=document.getElementById('line');
-  if(line){
-    var W2=1160,H2=200,p={l:8,r:8,t:18,b:28},n2=weeks.length,fmin=151000,fmax=166000;
-    var pts=weeks.map(function(w,i){var x=p.l+i*((W2-p.l-p.r)/(n2-1));var y=p.t+(1-(w[2]-fmin)/(fmax-fmin))*(H2-p.t-p.b);return [x,y]});
+  /* second account (footwear brand), Jun 1 – Oct 15 2026: [week, views, followers] */
+  var weeks2=[["Jun 1",1502176,39181],["Jun 8",232675,39489],["Jun 15",447831,40148],["Jun 22",1290328,42456],["Jun 29",1162475,44180],["Jul 6",1180926,45187],["Jul 13",826524,46026],["Jul 20",834196,46941],["Jul 27",1128375,47901],["Aug 3",1761590,49159],["Aug 10",1696908,50790],["Aug 17",2396010,53373],["Aug 24",2963371,57451],["Aug 31",2115194,61339],["Sep 7",927494,62169],["Sep 14",1787292,62919],["Sep 21",1671694,63964],["Sep 28",2848072,77563],["Oct 5",4069829,82705],["Oct 12",692687,83710]];
+  function drawLine(g,data,W2,H2,fmin,fmax,labelsEvery){
+    var NS='http://www.w3.org/2000/svg',p={l:8,r:8,t:18,b:28},n2=data.length;
+    var pts=data.map(function(w,i){var x=p.l+i*((W2-p.l-p.r)/(n2-1));var y=p.t+(1-(w[2]-fmin)/(fmax-fmin))*(H2-p.t-p.b);return [x,y]});
     var d=pts.map(function(q,i){return (i?'L':'M')+q[0].toFixed(1)+' '+q[1].toFixed(1)}).join(' ');
-    var area=document.createElementNS('http://www.w3.org/2000/svg','path');area.setAttribute('d',d+' L'+pts[n2-1][0].toFixed(1)+' '+(H2-p.b)+' L'+pts[0][0]+' '+(H2-p.b)+' Z');area.setAttribute('fill','url(#fg)');line.appendChild(area);
-    var path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d',d);path.setAttribute('fill','none');path.setAttribute('stroke','#2F5BFF');path.setAttribute('stroke-width','3');path.setAttribute('stroke-linejoin','round');path.setAttribute('stroke-linecap','round');line.appendChild(path);
+    var area=document.createElementNS(NS,'path');area.setAttribute('d',d+' L'+pts[n2-1][0].toFixed(1)+' '+(H2-p.b)+' L'+pts[0][0]+' '+(H2-p.b)+' Z');area.setAttribute('fill','url(#fg)');g.appendChild(area);
+    var path=document.createElementNS(NS,'path');path.setAttribute('d',d);path.setAttribute('fill','none');path.setAttribute('stroke','#2F5BFF');path.setAttribute('stroke-width','3');path.setAttribute('stroke-linejoin','round');path.setAttribute('stroke-linecap','round');g.appendChild(path);
     var len=path.getTotalLength();path.style.strokeDasharray=len;path.style.strokeDashoffset=len;path.style.transition='stroke-dashoffset 1.8s cubic-bezier(.2,.8,.2,1)';
-    var lo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){path.style.strokeDashoffset=0;lo.unobserve(e.target)}})},{threshold:.3});lo.observe(line.closest('svg'));
-    [0,n2-1].forEach(function(i){var c=document.createElementNS('http://www.w3.org/2000/svg','circle');c.setAttribute('cx',pts[i][0]);c.setAttribute('cy',pts[i][1]);c.setAttribute('r',5);c.setAttribute('fill','#fff');c.setAttribute('stroke','#2F5BFF');c.setAttribute('stroke-width','3');line.appendChild(c);
-      var t=document.createElementNS('http://www.w3.org/2000/svg','text');t.setAttribute('x',pts[i][0]);t.setAttribute('y',pts[i][1]-12);t.setAttribute('text-anchor',i?'end':'start');t.setAttribute('font-family','Archivo,sans-serif');t.setAttribute('font-weight','700');t.setAttribute('font-size','13');t.setAttribute('fill','#0A0A0B');t.textContent=weeks[i][2].toLocaleString('en-US');line.appendChild(t);});
-    [0,5,10,15].forEach(function(i){var l=document.createElementNS('http://www.w3.org/2000/svg','text');l.setAttribute('x',pts[i][0]);l.setAttribute('y',H2-8);l.setAttribute('text-anchor',i===15?'end':(i===0?'start':'middle'));l.setAttribute('font-family','IBM Plex Mono,monospace');l.setAttribute('font-size','11');l.setAttribute('fill','#8A8D95');l.textContent=weeks[i][0];line.appendChild(l);});
+    var lo=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){path.style.strokeDashoffset=0;lo.unobserve(e.target)}})},{threshold:.3});lo.observe(g.closest('svg'));
+    [0,n2-1].forEach(function(i){var c=document.createElementNS(NS,'circle');c.setAttribute('cx',pts[i][0]);c.setAttribute('cy',pts[i][1]);c.setAttribute('r',5);c.setAttribute('fill','#fff');c.setAttribute('stroke','#2F5BFF');c.setAttribute('stroke-width','3');g.appendChild(c);
+      var t=document.createElementNS(NS,'text');t.setAttribute('x',pts[i][0]);t.setAttribute('y',pts[i][1]-12);t.setAttribute('text-anchor',i?'end':'start');t.setAttribute('font-family','Archivo,sans-serif');t.setAttribute('font-weight','700');t.setAttribute('font-size','13');t.setAttribute('fill','#0A0A0B');t.textContent=data[i][2].toLocaleString('en-US');g.appendChild(t);});
+    for(var i=0;i<n2;i+=labelsEvery){var l=document.createElementNS(NS,'text');l.setAttribute('x',pts[i][0]);l.setAttribute('y',H2-8);l.setAttribute('text-anchor',i===0?'start':'middle');l.setAttribute('font-family','IBM Plex Mono,monospace');l.setAttribute('font-size','11');l.setAttribute('fill','#8A8D95');l.textContent=data[i][0];g.appendChild(l);}
+    var ll=document.createElementNS(NS,'text');ll.setAttribute('x',pts[n2-1][0]);ll.setAttribute('y',H2-8);ll.setAttribute('text-anchor','end');ll.setAttribute('font-family','IBM Plex Mono,monospace');ll.setAttribute('font-size','11');ll.setAttribute('fill','#8A8D95');ll.textContent=data[n2-1][0];g.appendChild(ll);
   }
+  var line=document.getElementById('line'); if(line) drawLine(line,weeks,1160,200,151000,166000,5);
+  var line2=document.getElementById('line2'); if(line2) drawLine(line2,weeks2,760,260,36000,86000,5);
+
+  /* heatmap colors */
+  document.querySelectorAll('.hm tbody tr').forEach(function(tr){var tds=tr.querySelectorAll('td');for(var i=1;i<tds.length-1;i++){var v=parseFloat(tds[i].textContent);tds[i].classList.add(v>=7?'g':(v>=5?'a':'r'));}});
 
   /* lead form */
   var form=document.getElementById('leadForm');
