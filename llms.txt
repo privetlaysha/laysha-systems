@@ -1,0 +1,29 @@
+# LAYSHA SYSTEMS
+
+> Sales systems for brands that sell through Instagram DMs and messengers, built by Vitaly Laysha in Los Angeles. One inbox and CRM for Instagram, WhatsApp, Telegram, VK, Facebook and YouTube comments with a reply-time clock; official-API Instagram automation where a person always closes; a content engine that builds on-brand carousels from a brand book; one content calendar; and a sales dashboard per manager. English and Russian.
+
+## Who it is for
+- Brands with 30k–500k followers that close sales in DMs, not at checkout
+- Resale and buyer shops with a team of managers on Instagram, Telegram and WhatsApp
+- Experts and online schools that want their own course platform instead of paying a template platform a cut
+
+## Results (real client numbers, measured in Metricool)
+- Resale brand, one Instagram account: 11.1M views in 107 days (Jun 29–Oct 15, 2026), +14.2k followers (151k to 165k), 1,659 posts published without manual scheduling
+- Footwear brand on the same engine: 37,850 to 84,028 followers (Jun–Oct 2026), 9.8M views in August 2026, 31.8M views Jun 1–Oct 17
+- Sales audit: 3,455 conversations scored across 7 channels; 30% of new leads paid, 12% to 46% by manager; 1,034 conversations went silent after the price
+
+## Services and prices
+- Sales system: $1,500 two-week diagnostic (credited to the build); builds from $9,000; support from $2,000/month
+- Content engine: build from $4,500; running from $800/month
+- Media production: Content $3,000/month (1 shoot day, 12 Reels, 8 carousels, scheduling); Full cycle $5,500/month (2 shoot days, 20 Reels, 30 clips, 12 carousels, ad creatives, DM automation)
+- Course platform: turnkey from $6,000; example: Models Degree (https://models.degree), a model school with 54 video lessons, 14 assignments, gated tests, admin with payments, referrals, chats and an Android app
+
+## Pages
+- [Home](https://laysha.systems/): offer, case numbers, pricing, contact
+- [We read 170,000 Instagram DMs](https://laysha.systems/blog/170000-instagram-dms/): sales audit findings
+- [11.1M views in 107 days](https://laysha.systems/blog/11-million-views-107-days/): content engine case
+- [How to run Instagram DMs with a team](https://laysha.systems/blog/instagram-dms-team-playbook/): playbook
+
+## Contact
+- hello@laysha.systems
+- Instagram: @laysha.systems
