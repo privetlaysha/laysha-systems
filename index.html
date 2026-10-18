@@ -188,6 +188,36 @@ h3{font-size:var(--s-lead);letter-spacing:-.02em;line-height:1.15;font-weight:60
 .offer .ex a{color:var(--ink);font-weight:600}
 @media (max-width:860px){.eng .t,.eng .chat{grid-column:1/-1}}
 
+/* views pipeline */
+.vw{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:48px var(--m);align-items:start}
+.vw .t{grid-column:1/8}.vw .t .lead{margin-top:28px}
+.vw .steps{margin:40px 0 0;padding:0;list-style:none;display:grid;gap:20px;max-width:52ch}
+.vw .steps b{font-weight:800}
+.vw .data{grid-column:9/13;background:var(--coal-2);padding:24px;align-self:center}
+.chips{list-style:none;margin:12px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chips li{background:#2a2c30;padding:8px 12px;font-size:14px;color:var(--on-coal)}
+.data .out{list-style:none;margin:12px 0 0;padding:0;display:grid;gap:8px;font-size:15px}
+.data .out li{background:#1c3a22;padding:10px 12px}
+/* channels strip */
+.chans{list-style:none;margin:48px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.chans li{background:var(--coal-2);color:var(--on-coal-2);padding:10px 14px;font-size:14px;font-weight:600}
+.chans li.on{background:var(--cobalt);color:#fff}
+.ui-cal{margin-top:16px}
+/* covers */
+.covers{margin-top:72px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.cv{aspect-ratio:4/5;padding:18px;display:flex;flex-direction:column;justify-content:space-between;font-family:var(--f)}
+.cv .k{font-size:13px;font-weight:600;opacity:.8}
+.cv b{font-size:clamp(1.1rem,.6rem + 1.1vw,1.6rem);font-weight:800;letter-spacing:-.03em;line-height:1.02}
+.cv .s{font-size:12px;opacity:.7}
+.c1{background:var(--ink);color:#fff}.c2{background:var(--cobalt);color:#fff}.c3{background:var(--yellow);color:var(--ink)}.c4{background:#fff;color:var(--ink)}.c5{background:#c22b10;color:#fff}
+.cov-cap{margin-top:14px}
+.kit{margin-top:clamp(72px,8vw,120px);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:20px var(--m)}
+.kit h3{grid-column:1/6;font-size:var(--s-head);font-weight:800;letter-spacing:-.04em;line-height:.95}
+.kit .kb{grid-column:7/13}
+.kit ul{margin:20px 0 0;padding:0;list-style:none;display:grid;gap:16px}
+.kit b{font-weight:800}
+@media (max-width:860px){.vw .t,.vw .data,.kit h3,.kit .kb{grid-column:1/-1}.covers{grid-template-columns:repeat(5,72%);overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}.cv{scroll-snap-align:start}}
+
 /* fit */
 .fit{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:48px var(--m)}
 .fit > div:first-child{grid-column:1/7} .fit > div:last-child{grid-column:7/13}
@@ -289,7 +319,7 @@ form.sent .ok-msg{display:block}
       <a href="#case" class="hide">Results</a><a href="#build" class="hide">What I build</a><a href="#engine" class="hide">Content engine</a><a href="/blog/" class="hide">Blog</a><a href="#pricing" class="hide">Pricing</a><a href="#contact" class="act">Book a walkthrough</a>
     </nav>
   </div>
-  <h1><span class="mask l"><span>Your traffic dies</span></span><span class="mask l"><span>in the DMs.</span></span></h1>
+  <h1><span class="mask l"><span>Your traffic dies</span></span> <span class="mask l"><span>in the DMs.</span></span></h1>
   <div class="foot">
     <p class="rv">I build the sales system for brands that sell through conversations. One inbox, replies that never miss, and a dashboard that shows where the money leaks.</p>
     <a class="btn y rv d1" href="#contact">Book a 20-min walkthrough <span class="arr" aria-hidden="true">→</span></a>
@@ -321,7 +351,7 @@ form.sent .ok-msg{display:block}
   <div class="wrap">
     <div class="case-head">
       <h2 class="rv">11.1M views in 107 days.</h2>
-      <p class="rv d1">A 150k-follower resale brand on Instagram, Jun 29 to Oct 15, 2026, from Metricool. Five messengers and no CRM before; every Reel posted by hand. Below is what one account did once the system ran.</p>
+      <p class="rv d1">A resale brand with about 150k followers, June 29 to October 15, 2026. Before: six sales managers on Telegram, five WhatsApp numbers and DMs across five Instagram accounts, all answered and posted by hand. I put all of it in one place. Below is one account once the system ran.</p>
     </div>
     <div class="bars" id="bars"><svg viewBox="0 0 1200 320" role="img" aria-label="Weekly Instagram views for the resale brand, June 29 to October 15, peaking at 1.24 million in the week of September 14"><g id="barsG"></g></svg></div>
     <div class="stats">
@@ -352,7 +382,7 @@ form.sent .ok-msg{display:block}
   <div class="paper2">
     <h3 class="rv">Before.</h3>
     <ul class="rv d1">
-      <li>Five messengers, no CRM, nobody owning a conversation.</li>
+      <li>Six managers on Telegram, five WhatsApp numbers, five Instagram inboxes. No CRM, nobody owning a conversation.</li>
       <li>Hot leads expiring in Instagram DMs after days.</li>
       <li>Every post scheduled by hand.</li>
       <li>No way to see which manager actually sells.</li>
@@ -363,9 +393,31 @@ form.sent .ok-msg{display:block}
     <ul class="rv d1">
       <li>One inbox for Instagram, WhatsApp, Telegram, VK, Facebook and YouTube comments, with an SLA on every thread.</li>
       <li>Official-API automation answers first; a human closes.</li>
-      <li>One calendar across four accounts, follower changes daily.</li>
+      <li>One calendar for every account, with today's numbers beside each one.</li>
       <li>A dashboard per manager: waiting, overdue, first response, sales.</li>
     </ul>
+  </div>
+</section>
+
+<section id="views" class="coal sec">
+  <div class="wrap vw">
+    <div class="t">
+      <h2 class="rv">Where the views came from.</h2>
+      <p class="lead rv d1">Not luck, and not posting more by hand. Data first, then scripts, then cuts.</p>
+      <ul class="steps rv d2">
+        <li><b>Every hit, downloaded.</b> I pulled every video of ours that passed 100,000 views, up to the ones with tens of millions, with full transcripts and the complete YouTube statistics.</li>
+        <li><b>An agent read all of it.</b> It compared what held people and what lost them, and showed which topics, hooks and structures worked.</li>
+        <li><b>I wrote the scripts from that.</b> We shot them twice over: long horizontal videos for YouTube and separate Reels. The Reels brought millions of views on their own.</li>
+        <li><b>Every long video was cut again.</b> Vertical clips went out on every platform, which brought more views than the originals.</li>
+        <li><b>Now it tests itself.</b> Each account runs five to eight trial Reels at a time, and the winners get pushed.</li>
+      </ul>
+    </div>
+    <div class="data rv d1" data-ui>
+      <p class="small muted">What the agent reads for every video</p>
+      <ul class="chips"><li>Transcript</li><li>Views</li><li>Retention curve</li><li>First 3 seconds</li><li>Likes</li><li>Comments</li><li>Shares</li><li>Click-through</li><li>Topic</li><li>Length</li></ul>
+      <p class="small muted" style="margin-top:28px">What it hands back</p>
+      <ul class="out"><li>Topics ranked by what held viewers</li><li>Hooks that kept people past three seconds</li><li>A script structure for each format</li><li>Which long videos to cut, and where</li></ul>
+    </div>
   </div>
 </section>
 
@@ -399,20 +451,21 @@ form.sent .ok-msg{display:block}
   <div class="wrap">
     <div class="cal-head">
       <h2 class="rv">Every account, one week.</h2>
-      <p class="rv d1 muted">Scheduled posts, what the engine generated, what someone dropped in from the team chat, and what already went live, with yesterday's follower change beside each account. Sample week; the real one runs on the client's domain.</p>
+      <p class="rv d1 muted">Not only what goes out when. Every account shows its numbers in the same place: followers today, the change today, the change since the first of the month. One approved post is cross-posted to every channel it fits. Sample week; the real one runs on the client's domain.</p>
     </div>
+    <ul class="chans rv" aria-label="Connected channels"><li class="on">Instagram · brand 1</li><li class="on">Instagram · brand 2</li><li class="on">Instagram · brand 3</li><li class="on">Instagram · founder</li><li class="on">YouTube</li><li class="on">TikTok</li><li>Facebook</li><li>Threads</li><li>Pinterest</li><li>Telegram</li><li>VK</li><li>X</li></ul>
     <div class="ui-cal rv" data-ui>
       <div class="grid" role="table" aria-label="Content calendar, sample week">
         <div class="c h" role="columnheader">Account</div><div class="c h">Mon 13</div><div class="c h">Tue 14</div><div class="c h">Wed 15</div><div class="c h">Thu 16</div><div class="c h">Fri 17</div><div class="c h">Sat 18</div><div class="c h">Sun 19</div>
-        <div class="c acc"><b>@brand</b><span>Instagram</span><em>+412 yesterday</em></div>
+        <div class="c acc"><b>@brand</b><span>Instagram</span><em>165,227 · +412 today · +4,113 this month</em></div>
         <div class="c"><div class="p live">Reel · drop teaser<small>09:00</small></div></div><div class="c"><div class="p gen">Carousel · 6 looks<small>12:30</small></div></div><div class="c"><div class="p">Stories · restock<small>10:00</small></div></div><div class="c"><div class="p">Reel · founder talks<small>18:00</small></div><div class="p gen">Carousel · sizes<small>12:30</small></div></div><div class="c"><div class="p">Reel · UGC cut<small>17:00</small></div></div><div class="c"><div class="p gen">Carousel · sale<small>11:00</small></div></div><div class="c"></div>
-        <div class="c acc"><b>@founder</b><span>Instagram</span><em>+96 yesterday</em></div>
+        <div class="c acc"><b>@founder</b><span>Instagram</span><em>38,410 · +96 today · +1,020 this month</em></div>
         <div class="c"><div class="p live">Reel · behind the set<small>19:00</small></div></div><div class="c"></div><div class="c"><div class="p">Stories · Q&amp;A<small>20:00</small></div></div><div class="c"></div><div class="c"><div class="p gen">Reel · podcast clip<small>19:00</small></div></div><div class="c"></div><div class="c"><div class="p">Reel · week recap<small>18:00</small></div></div>
-        <div class="c acc"><b>Brand channel</b><span>YouTube</span><em>+1,210 yesterday</em></div>
+        <div class="c acc"><b>Brand channel</b><span>YouTube</span><em>412,000 · +1,210 today · +18,400 this month</em></div>
         <div class="c"><div class="p live">Short · clip 1<small>15:00</small></div></div><div class="c"><div class="p gen">Short · clip 2<small>15:00</small></div></div><div class="c"><div class="p">Podcast · ep. 14<small>17:00</small></div></div><div class="c"><div class="p gen">Short · clip 3<small>15:00</small></div></div><div class="c"><div class="p gen">Short · clip 4<small>15:00</small></div></div><div class="c"></div><div class="c"><div class="p gen">Short · clip 5<small>15:00</small></div></div>
-        <div class="c acc"><b>@brand</b><span>TikTok</span><em>+2,340 yesterday</em></div>
+        <div class="c acc"><b>@brand</b><span>TikTok</span><em>96,300 · +2,340 today · +21,900 this month</em></div>
         <div class="c"><div class="p live">Clip 1 · hook A<small>13:00</small></div></div><div class="c"><div class="p gen">Clip 2<small>13:00</small></div></div><div class="c"><div class="p gen">Clip 3 · duet<small>13:00</small></div></div><div class="c"><div class="p gen">Clip 4<small>13:00</small></div><div class="p">Clip 5 · hook B<small>19:00</small></div></div><div class="c"><div class="p gen">Clip 6<small>13:00</small></div></div><div class="c"><div class="p gen">Clip 7<small>13:00</small></div></div><div class="c"><div class="p gen">Clip 8 · best of<small>13:00</small></div></div>
-        <div class="c acc"><b>Brand channel</b><span>Telegram · Facebook</span><em>+31 yesterday</em></div>
+        <div class="c acc"><b>Brand channel</b><span>Telegram · Facebook</span><em>12,880 · +31 today · +420 this month</em></div>
         <div class="c"><div class="p live">Post · drop + link<small>10:00</small></div></div><div class="c"><div class="p">Cross-post · carousel<small>12:40</small></div></div><div class="c"></div><div class="c"><div class="p">Post · founder reel<small>18:10</small></div></div><div class="c"><div class="p">Post · sale<small>11:00</small></div></div><div class="c"></div><div class="c"></div>
       </div>
     </div>
@@ -424,10 +477,10 @@ form.sent .ok-msg{display:block}
   <div class="wrap">
     <h2 class="rv">What I build in ninety days.</h2>
     <ol>
-      <li class="rv"><span class="name">One inbox</span><span class="what">Instagram DMs and comments, WhatsApp, Telegram, VK, Facebook and leads from YouTube comments in one CRM, with a pipeline, routing to managers and an SLA clock on every conversation.</span></li>
+      <li class="rv"><span class="name">One inbox</span><span class="what">Instagram DMs and comments from every account, WhatsApp numbers, Telegram, VK, Facebook and leads from YouTube comments in one CRM. A pipeline, routing to managers, an SLA clock on every conversation, and managers replying to Instagram from the CRM.</span></li>
       <li class="rv"><span class="name">Replies that never miss</span><span class="what">Official Instagram API: DM menus, keyword triggers, comment-to-DM, story replies. An assistant drafts; a human always sends.</span></li>
       <li class="rv"><span class="name">Content on-brand</span><span class="what">An engine that finds the drop, builds carousels to the brand book, checks them in code before anyone sees them, and learns from every correction.</span></li>
-      <li class="rv"><span class="name">One calendar</span><span class="what">Every scheduled post across every account, plus anything posted by hand from the team chat, so nothing goes out twice.</span></li>
+      <li class="rv"><span class="name">One calendar</span><span class="what">Every scheduled post across every account and channel, anything posted by hand from the team chat, and today's numbers for each account beside it. Cross-posting from one place.</span></li>
       <li class="rv"><span class="name">One dashboard</span><span class="what">New clients by channel, answered, waiting, overdue, median first response and sales, per manager.</span></li>
       <li class="rv"><span class="name">Distribution</span><span class="what">One podcast becomes thirty clips for Instagram, TikTok, YouTube, Facebook, Threads and VK on a schedule, with watermarks and alerts.</span></li>
     </ol>
@@ -438,11 +491,12 @@ form.sent .ok-msg{display:block}
   <div class="wrap eng">
     <div class="t">
       <h2 class="rv">The content engine.</h2>
-      <p class="lead rv d1">Built for a resale brand with four accounts. A brand book became code: type, layout, voice and forty rules the engine checks before anyone sees a slide.</p>
+      <p class="lead rv d1">Built for a resale brand with five Instagram accounts. I wrote the brand book, then turned it into code: type, layout, voice and forty rules the engine checks before anyone sees a slide.</p>
       <ul class="steps rv d2">
         <li><b>It reads.</b> Bots watch the blogs and sources the brand trusts and pull the stories worth a carousel, with their files.</li>
         <li><b>The team picks.</b> The shortlist lands in the work chat. The topics with the most reactions go to production.</li>
         <li><b>It builds.</b> Carousels at 1080×1350 in the brand's voice, three covers to choose from, the post text and hashtags in one folder.</li>
+        <li><b>It publishes.</b> Approved carousels go to Instagram on schedule, on topics you set or on what is trending this week.</li>
         <li><b>It learns.</b> Every correction a person makes becomes a rule, so next week needs fewer of them.</li>
       </ul>
     </div>
@@ -455,6 +509,27 @@ form.sent .ok-msg{display:block}
       <div class="bubble bot opt"><span>5. Archive drop announced</span><em>1 vote</em></div>
       <div class="bubble bot done"><span class="who">Engine · 12:00</span>Top two in production. Carousels and post text ready for review by 15:00.</div>
       <p class="small" style="color:var(--on-coal-2);margin-top:6px">Sample chat; topics are illustrative.</p>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="covers rv" aria-label="Five sample carousel covers made by the engine">
+      <div class="cv c1"><span class="k">Your brand</span><b>The restock nobody announced.</b><span class="s">1 / 8</span></div>
+      <div class="cv c2"><span class="k">Your topic</span><b>How to spot a fake in ten seconds.</b><span class="s">1 / 7</span></div>
+      <div class="cv c3"><span class="k">Trending this week</span><b>Five shoes everyone wore in Paris.</b><span class="s">1 / 6</span></div>
+      <div class="cv c4"><span class="k">Drop</span><b>Friday, 10:00. Twelve pairs.</b><span class="s">1 / 5</span></div>
+      <div class="cv c5"><span class="k">Sale</span><b>Last sizes, last weekend.</b><span class="s">1 / 6</span></div>
+    </div>
+    <p class="small muted cov-cap">Sample covers in a placeholder style; each client's engine uses its own brand book.</p>
+    <div class="kit">
+      <h3 class="rv">The toolkit behind it.</h3>
+      <div class="kb"><p class="rv d1">My own set of AI skills for content, used on every brand I run:</p>
+      <ul class="rv d2">
+        <li><b>Hooks and covers.</b> Every title, cover and opening line checked for benefit, intrigue, urgency and belonging.</li>
+        <li><b>Script builder.</b> Problem, escalation, story, solution, example and the call to action, for a Reel or a 30-minute episode.</li>
+        <li><b>Topic matrix.</b> Competitors ranked by views per day, a balance of trend and expert videos, targets for click-through and retention.</li>
+        <li><b>Titles and descriptions.</b> Title, description, hook, CTA and tags for YouTube, Reels, Shorts and TikTok.</li>
+        <li><b>Script humanizer.</b> Rewrites drafts so they sound like a person talking, not a translation.</li>
+      </ul></div>
     </div>
   </div>
 </section>
@@ -495,7 +570,7 @@ form.sent .ok-msg{display:block}
         <div class="price"><b class="num">$4,500</b><span>build, from. Running it from $800 a month.</span><a class="tlink" href="#contact">See it on my screen</a></div>
       </div>
       <div class="offer rv">
-        <div class="t"><h3>Media production</h3><p>I shoot, edit and publish, then route the traffic into DMs that sell. Ten years on fashion sets; 31.8M views on the last account I ran it for.</p></div>
+        <div class="t"><h3>Media production</h3><p>The full cycle, from the script to a multi-camera shoot with a large crew: stylists, make-up, gaffers, set design. I find and book the location, cast, run the set, edit and publish, then route the traffic into DMs that sell. Campaigns, music videos, podcasts, e-commerce, branding and brand books.</p><p class="ex">Ten years on fashion sets; 31.8M views on the last account I ran it for. Work at <a href="https://instagram.com/layshaproduction" target="_blank" rel="noopener">LAYSHA PRODUCTION</a>.</p></div>
         <ul class="pk">
           <li><b>Content · $3,000 a month.</b> One shoot day, up to six hours. 12 edited Reels, 8 carousels, captions and a schedule for Instagram, TikTok and Shorts. A monthly report.</li>
           <li><b>Full cycle · $5,500 a month.</b> Two shoot days. 20 Reels, 30 clips cut from the shoot or your podcast, 12 carousels, ad creatives, DM automation for the traffic, and a weekly call.</li>
@@ -529,7 +604,7 @@ form.sent .ok-msg{display:block}
     <div class="t">
       <h2 class="rv">Ten years on fashion sets.</h2>
       <p class="lead rv d1">Photographer and producer on NYFW shows and campaigns for Giorgio Armani, Michael Kors, Jason Wu and Proenza Schouler.</p>
-      <p class="rv d2">Then creative director of a 25-person resale brand, where I rebuilt the whole operating layer alone in ninety days. I build systems the way I ran sets: fast, on-brand, finished on the day. Meta developer API, CRM and automation, content engines. English and Russian.</p>
+      <p class="rv d2">I run <a href="https://instagram.com/layshaproduction" target="_blank" rel="noopener">LAYSHA PRODUCTION</a>: campaigns, music videos and branded content with full crews, from the script and the brand book to the last cut. Then I became creative director of a 25-person resale brand and rebuilt its whole operating layer alone in ninety days. I build systems the way I ran sets: fast, on-brand, finished on the day. Meta developer API, CRM and automation, content engines. English and Russian.</p>
     </div>
   </div>
 </section>
