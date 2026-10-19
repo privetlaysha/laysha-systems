@@ -4,7 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>LAYSHA SYSTEMS — DM sales systems for Instagram brands</title>
+<script>(function(){try{var l=localStorage.getItem('lang');var n=(navigator.language||'').toLowerCase();if(l!=='en'&&(l==='ru'||(!l&&n.indexOf('ru')===0)))location.replace('/ru/'+(location.hash||''))}catch(e){}})();</script>
 <link rel="canonical" href="https://laysha.systems/">
+<link rel="alternate" hreflang="en" href="https://laysha.systems/">
+<link rel="alternate" hreflang="ru" href="https://laysha.systems/ru/">
+<link rel="alternate" hreflang="x-default" href="https://laysha.systems/">
 <meta name="description" content="Sales systems for brands that sell through Instagram DMs: one inbox for every channel, replies that never miss, content on-brand at volume, and a dashboard that shows where the money leaks. Los Angeles.">
 <meta property="og:url" content="https://laysha.systems/"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image">
 <meta property="og:title" content="LAYSHA SYSTEMS">
@@ -74,6 +78,9 @@ h3{font-size:var(--s-lead);letter-spacing:-.02em;line-height:1.15;font-weight:60
 .top nav a{text-decoration:none}
 .top nav a:hover{text-decoration:underline}
 .top .act{text-decoration:underline}
+.top .lsw{display:inline-flex;gap:12px;margin-left:clamp(4px,1vw,12px)}
+.top .lsw a{text-decoration:none;color:inherit;opacity:.55}
+.top .lsw a[aria-current]{opacity:1;text-decoration:underline}
 .hero h1{font-size:var(--s-display);letter-spacing:-.05em;line-height:.88;max-width:none;align-self:center;margin-top:8vh;margin-left:-.04em}
 .hero h1 .l{display:block}
 .hero .foot{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap}
@@ -318,7 +325,7 @@ form.sent .ok-msg{display:block}
   <div class="top">
     <a href="#top" style="text-decoration:none">LAYSHA SYSTEMS</a>
     <nav aria-label="Main">
-      <a href="#case" class="hide">Results</a><a href="#build" class="hide">What I build</a><a href="#engine" class="hide">Content engine</a><a href="/blog/" class="hide">Blog</a><a href="#pricing" class="hide">Pricing</a><a href="#contact" class="act">Book a walkthrough</a>
+      <a href="#case" class="hide">Results</a><a href="#build" class="hide">What I build</a><a href="#engine" class="hide">Content engine</a><a href="/blog/" class="hide">Blog</a><a href="#pricing" class="hide">Pricing</a><a href="#contact" class="act">Book a walkthrough</a><span class="lsw" aria-label="Language"><a href="/" aria-current="true" onclick="try{localStorage.setItem('lang','en')}catch(e){}">EN</a><a href="/ru/" lang="ru" hreflang="ru" onclick="try{localStorage.setItem('lang','ru')}catch(e){}">RU</a></span>
     </nav>
   </div>
   <h1><span class="mask l"><span>Your traffic dies</span></span> <span class="mask l"><span>in the DMs.</span></span></h1>
