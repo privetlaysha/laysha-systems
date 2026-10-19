@@ -225,6 +225,9 @@ h3{font-size:var(--s-lead);letter-spacing:-.02em;line-height:1.15;font-weight:60
 @media (max-width:860px){.vw .t,.vw .data,.kit h3,.kit .kb{grid-column:1/-1}.covers{grid-template-columns:repeat(5,72%);overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}.cv{scroll-snap-align:start}}
 
 .shot{margin:0}.shot img{width:100%;height:auto;display:block}.shot figcaption{margin-top:12px}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.shots .cap{grid-column:1/-1;margin-top:-2px}
+@media (max-width:860px){.shots{grid-template-columns:1fr}}
 
 /* fit */
 .fit{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:48px var(--m)}
@@ -595,7 +598,11 @@ form.sent .ok-msg{display:block}
         <ul><li>Кабинет студента с прогрессом и поэтапным доступом</li><li>Тесты, задания, защита от копирования</li><li>Админка: студенты, лиды, оплаты, рефералы, чаты</li><li>Опционально — ассистент, обученный на ваших материалах</li></ul>
         <div class="price"><b class="num">$6,000</b><span>под ключ. Поддержка от $500 в месяц.</span><a class="tlink" href="https://models.degree" target="_blank" rel="noopener">Открыть Models Degree</a></div>
       </div>
-      <figure class="shot rv"><img src="/img/models-degree-lessons.jpg" alt="Кабинет студента Models Degree: пять модулей курса с числом уроков, длительностью и прогрессом" width="1200" height="668" loading="lazy"><figcaption class="small muted">Models Degree, экран уроков студента. Скриншот в английском переводе; сама школа работает на русском.</figcaption></figure>
+      <div class="shots rv">
+        <figure class="shot"><img src="/img/md-modules.jpg" alt="Кабинет студента Models Degree: пять модулей курса с фотографиями, числом уроков, длительностью и прогрессом" width="2056" height="980" loading="lazy"></figure>
+        <figure class="shot"><img src="/img/md-module.jpg" alt="Страница модуля в Models Degree: прогресс, кнопка продолжить и список уроков с тестами" width="2056" height="952" loading="lazy"></figure>
+        <p class="cap small muted">Models Degree, кабинет студента: модули и страница урока.</p>
+      </div>
     </div>
   </div>
 </section>

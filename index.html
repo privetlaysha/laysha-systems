@@ -226,6 +226,9 @@ h3{font-size:var(--s-lead);letter-spacing:-.02em;line-height:1.15;font-weight:60
 @media (max-width:860px){.vw .t,.vw .data,.kit h3,.kit .kb{grid-column:1/-1}.covers{grid-template-columns:repeat(5,72%);overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}.cv{scroll-snap-align:start}}
 
 .shot{margin:0}.shot img{width:100%;height:auto;display:block}.shot figcaption{margin-top:12px}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.shots .cap{grid-column:1/-1;margin-top:-2px}
+@media (max-width:860px){.shots{grid-template-columns:1fr}}
 
 /* fit */
 .fit{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:48px var(--m)}
@@ -592,7 +595,11 @@ form.sent .ok-msg{display:block}
         <ul><li>Student cabinet with progress and gated lessons</li><li>Tests, assignments, copy protection</li><li>Admin: students, leads, payments, referrals, chats</li><li>Optional assistant trained on your material</li></ul>
         <div class="price"><b class="num">$6,000</b><span>turnkey. Support from $500 a month.</span><a class="tlink" href="https://models.degree" target="_blank" rel="noopener">Open Models Degree</a></div>
       </div>
-      <figure class="shot rv"><img src="img/models-degree-lessons.jpg" alt="Models Degree student cabinet: five course modules with lesson counts, durations and progress bars" width="1200" height="668" loading="lazy"><figcaption class="small muted">Models Degree, the student's lessons screen. Shown here in English translation; the live school runs in Russian.</figcaption></figure>
+      <div class="shots rv">
+        <figure class="shot"><img src="img/md-modules.jpg" alt="Models Degree student cabinet: five course modules with photos, lesson counts, durations and progress bars" width="2056" height="980" loading="lazy"></figure>
+        <figure class="shot"><img src="img/md-module.jpg" alt="A module page in Models Degree: progress, a continue button and the lesson list with gated tests" width="2056" height="952" loading="lazy"></figure>
+        <p class="cap small muted">Models Degree, the student's cabinet: the modules and a lesson page. The live school runs in Russian; English is next.</p>
+      </div>
     </div>
   </div>
 </section>
