@@ -8,11 +8,12 @@
 <link rel="alternate" hreflang="en" href="https://laysha.systems/">
 <link rel="alternate" hreflang="ru" href="https://laysha.systems/ru/">
 <link rel="alternate" hreflang="x-default" href="https://laysha.systems/">
-<meta name="description" content="Системы продаж для брендов, которые продают в переписке Instagram: один инбокс для всех каналов, ответы без пропусков, контент в фирменном стиле на потоке и дашборд, который показывает, где утекают деньги. Лос-Анджелес.">
+<meta name="description" content="Системы продаж для брендов, которые продают в директе Instagram: один инбокс для всех каналов, ответы без пропусков и дашборд утечек денег.">
 <meta property="og:url" content="https://laysha.systems/ru/"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image">
 <meta property="og:title" content="LAYSHA SYSTEMS">
 <meta property="og:description" content="Ваш трафик теряется в директе. Я строю систему, которая не даёт ему потеряться.">
 <meta property="og:image" content="https://laysha.systems/portrait.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0034eb">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -319,6 +320,24 @@ form.sent .ok-msg{display:block}
   .contact .two-col{grid-template-columns:1fr}
   .months li{grid-template-columns:3.6ch 1fr 5ch;gap:12px}
 }
+
+/* r16: audit fixes */
+.num,.matrix td{font-variant-numeric:normal}
+.top a{display:inline-block;padding:6px 0}
+.top .lsw{gap:4px}.top .lsw a{padding:6px 4px;min-width:28px;text-align:center}
+.tlink,.ex a,.reach a,.foot-big .row a{display:inline-block;padding:4px 0}
+.caps .name{font-size:clamp(1.9rem,3.7vw,3.75rem)}
+.top .cta-s{display:none}
+@media (max-width:860px){
+  .hero{min-height:92svh}
+  .hero h1{font-size:13.4vw;margin-bottom:6vh}
+  .top{align-items:center}
+  .top > a:first-child{white-space:nowrap}
+  .top nav{gap:16px}
+  .top .act{white-space:nowrap}
+  .top .cta-l{display:none}
+  .top .cta-s{display:inline}
+}
 </style>
 <style>
 .months li{grid-template-columns:4.2ch 1fr 8ch}
@@ -331,7 +350,7 @@ form.sent .ok-msg{display:block}
   <div class="top">
     <a href="#top" style="text-decoration:none">LAYSHA SYSTEMS</a>
     <nav aria-label="Основная навигация">
-      <a href="#case" class="hide">Результаты</a><a href="#build" class="hide">Что я строю</a><a href="#engine" class="hide">Контент-движок</a><a href="/blog/" class="hide">Блог</a><a href="#pricing" class="hide">Цены</a><a href="#contact" class="act">Записаться на разбор</a><span class="lsw" aria-label="Язык"><a href="/" lang="en" hreflang="en" onclick="try{localStorage.setItem('lang','en')}catch(e){}">EN</a><a href="/ru/" aria-current="true" onclick="try{localStorage.setItem('lang','ru')}catch(e){}">RU</a></span>
+      <a href="#case" class="hide">Результаты</a><a href="#build" class="hide">Что я строю</a><a href="#engine" class="hide">Контент-движок</a><a href="/blog/" class="hide">Блог</a><a href="#pricing" class="hide">Цены</a><a href="#contact" class="act"><span class="cta-l">Записаться на разбор</span><span class="cta-s">Разбор</span></a><span class="lsw" aria-label="Язык"><a href="/" lang="en" hreflang="en" onclick="try{localStorage.setItem('lang','en')}catch(e){}">EN</a><a href="/ru/" aria-current="true" onclick="try{localStorage.setItem('lang','ru')}catch(e){}">RU</a></span>
     </nav>
   </div>
   <h1><span class="mask l"><span>Ваш трафик теряется</span></span> <span class="mask l"><span>в директе.</span></span></h1>
@@ -368,7 +387,7 @@ form.sent .ok-msg{display:block}
       <h2 class="rv">11,1 млн просмотров за 107 дней.</h2>
       <p class="rv d1">Ресейл-бренд со ~150 тыс подписчиков, 29 июня — 15 октября 2026. До: шесть менеджеров в Telegram, пять номеров WhatsApp и директ пяти Instagram-аккаунтов — всё отвечалось и постилось вручную. Я собрал всё в одно место. Ниже — один аккаунт после запуска системы.</p>
     </div>
-    <div class="bars" id="bars"><svg viewBox="0 0 1200 320" role="img" aria-label="Просмотры Instagram по неделям, 29 июня — 15 октября, пик 1,24 млн в неделю 14 сентября"><g id="barsG"></g></svg></div>
+    <div class="bars" id="bars"><svg id="barsSvg" viewBox="0 0 1200 320" role="img" aria-label="Просмотры Instagram по неделям, 29 июня — 15 октября, пик 1,24 млн в неделю 14 сентября"><g id="barsG"></g></svg></div>
     <div class="stats">
       <div class="rv"><b class="num" data-count="11.1" data-suffix=" млн" data-dec="1">11,1 млн</b><span>просмотров на одном аккаунте за 107 дней</span></div>
       <div class="rv d1"><b class="num" data-count="1.24" data-suffix=" млн" data-dec="2">1,24 млн</b><span>просмотров в лучшую неделю (14 сентября)</span></div>
@@ -675,14 +694,14 @@ window.LEAD_FORM = window.LEAD_FORM || {action:"", map:{}};
   var weeks=[["29 июн",891655],["6 июл",1220945],["13 июл",438656],["20 июл",355151],["27 июл",502218],["3 авг",1061764],["10 авг",382859],["17 авг",619974],["24 авг",340534],["31 авг",1150614],["7 сен",764991],["14 сен",1244164],["21 сен",740492],["28 сен",670846],["5 окт",497293],["12 окт",327100]];
   var g=document.getElementById('barsG');
   if(g){
-    var W=1200,H=320,top=34,bot=36,n=weeks.length,max=1244164,bw=W/n,gap=10,out='';
+    var nar=innerWidth<700,W=nar?600:1200,H=nar?300:320,top=34,bot=36,n=weeks.length,max=1244164,bw=W/n,gap=nar?6:10,out='';
     weeks.forEach(function(w,i){
       var h=(H-top-bot)*w[1]/max, x=i*bw+gap/2, y=H-bot-h, hi=w[1]>=1000000;
       out+='<rect class="b" x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+(bw-gap).toFixed(1)+'" height="'+h.toFixed(1)+'" fill="'+(hi?'#0034eb':'#c9cfe6')+'" style="transition-delay:'+(i*40)+'ms"/>';
-      if(hi) out+='<text x="'+(x+(bw-gap)/2).toFixed(1)+'" y="'+(y-10).toFixed(1)+'" text-anchor="middle" font-size="17" font-weight="600" fill="#111214">'+(w[1]/1e6).toFixed(2).replace('.',',')+' млн</text>';
-      if(i%3===0) out+='<text x="'+x.toFixed(1)+'" y="'+(H-10)+'" font-size="15" fill="#55575c">'+w[0]+'</text>';
+      if(hi) out+='<text x="'+(x+(bw-gap)/2).toFixed(1)+'" y="'+(y-10).toFixed(1)+'" text-anchor="middle" font-size="'+(nar?19:17)+'" font-weight="600" fill="#111214">'+(w[1]/1e6).toFixed(2).replace('.',',')+' млн</text>';
+      var last=nar&&i===n-1;if(i%(nar?5:3)===0||last) out+='<text x="'+(last?(x+bw-gap):x).toFixed(1)+'" y="'+(H-10)+'"'+(last?' text-anchor="end"':'')+' font-size="'+(nar?18:15)+'" fill="#55575c">'+w[0]+'</text>';
     });
-    g.innerHTML=out;
+    g.innerHTML=out;var sv=document.getElementById('barsSvg');if(sv)sv.setAttribute('viewBox','0 0 '+W+' '+H);
   }
 
   /* reveal */

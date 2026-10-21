@@ -9,11 +9,12 @@
 <link rel="alternate" hreflang="en" href="https://laysha.systems/">
 <link rel="alternate" hreflang="ru" href="https://laysha.systems/ru/">
 <link rel="alternate" hreflang="x-default" href="https://laysha.systems/">
-<meta name="description" content="Sales systems for brands that sell through Instagram DMs: one inbox for every channel, replies that never miss, content on-brand at volume, and a dashboard that shows where the money leaks. Los Angeles.">
+<meta name="description" content="Sales systems for brands that sell in Instagram DMs: one inbox for every channel, replies that never miss, and a dashboard that shows where money leaks.">
 <meta property="og:url" content="https://laysha.systems/"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image">
 <meta property="og:title" content="LAYSHA SYSTEMS">
 <meta property="og:description" content="Your traffic dies in the DMs. I build the system that keeps it alive.">
 <meta property="og:image" content="https://laysha.systems/portrait.jpg">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#0034eb">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -320,6 +321,24 @@ form.sent .ok-msg{display:block}
   .contact .two-col{grid-template-columns:1fr}
   .months li{grid-template-columns:3.6ch 1fr 5ch;gap:12px}
 }
+
+/* r16: audit fixes */
+.num,.matrix td{font-variant-numeric:normal}
+.top a{display:inline-block;padding:6px 0}
+.top .lsw{gap:4px}.top .lsw a{padding:6px 4px;min-width:28px;text-align:center}
+.tlink,.ex a,.reach a,.foot-big .row a{display:inline-block;padding:4px 0}
+.caps .name{font-size:clamp(1.9rem,3.7vw,3.75rem)}
+.top .cta-s{display:none}
+@media (max-width:860px){
+  .hero{min-height:92svh}
+  .hero h1{font-size:13.4vw;margin-bottom:6vh}
+  .top{align-items:center}
+  .top > a:first-child{white-space:nowrap}
+  .top nav{gap:16px}
+  .top .act{white-space:nowrap}
+  .top .cta-l{display:none}
+  .top .cta-s{display:inline}
+}
 </style>
 </head>
 <body>
@@ -328,7 +347,7 @@ form.sent .ok-msg{display:block}
   <div class="top">
     <a href="#top" style="text-decoration:none">LAYSHA SYSTEMS</a>
     <nav aria-label="Main">
-      <a href="#case" class="hide">Results</a><a href="#build" class="hide">What I build</a><a href="#engine" class="hide">Content engine</a><a href="/blog/" class="hide">Blog</a><a href="#pricing" class="hide">Pricing</a><a href="#contact" class="act">Book a walkthrough</a><span class="lsw" aria-label="Language"><a href="/" aria-current="true" onclick="try{localStorage.setItem('lang','en')}catch(e){}">EN</a><a href="/ru/" lang="ru" hreflang="ru" onclick="try{localStorage.setItem('lang','ru')}catch(e){}">RU</a></span>
+      <a href="#case" class="hide">Results</a><a href="#build" class="hide">What I build</a><a href="#engine" class="hide">Content engine</a><a href="/blog/" class="hide">Blog</a><a href="#pricing" class="hide">Pricing</a><a href="#contact" class="act"><span class="cta-l">Book a walkthrough</span><span class="cta-s">Book a call</span></a><span class="lsw" aria-label="Language"><a href="/" aria-current="true" onclick="try{localStorage.setItem('lang','en')}catch(e){}">EN</a><a href="/ru/" lang="ru" hreflang="ru" onclick="try{localStorage.setItem('lang','ru')}catch(e){}">RU</a></span>
     </nav>
   </div>
   <h1><span class="mask l"><span>Your traffic dies</span></span> <span class="mask l"><span>in the DMs.</span></span></h1>
@@ -365,7 +384,7 @@ form.sent .ok-msg{display:block}
       <h2 class="rv">11.1M views in 107 days.</h2>
       <p class="rv d1">A resale brand with about 150k followers, June 29 to October 15, 2026. Before: six sales managers on Telegram, five WhatsApp numbers and DMs across five Instagram accounts, all answered and posted by hand. I put all of it in one place. Below is one account once the system ran.</p>
     </div>
-    <div class="bars" id="bars"><svg viewBox="0 0 1200 320" role="img" aria-label="Weekly Instagram views for the resale brand, June 29 to October 15, peaking at 1.24 million in the week of September 14"><g id="barsG"></g></svg></div>
+    <div class="bars" id="bars"><svg id="barsSvg" viewBox="0 0 1200 320" role="img" aria-label="Weekly Instagram views for the resale brand, June 29 to October 15, peaking at 1.24 million in the week of September 14"><g id="barsG"></g></svg></div>
     <div class="stats">
       <div class="rv"><b class="num" data-count="11.1" data-suffix="M" data-dec="1">11.1M</b><span>views on one account in 107 days</span></div>
       <div class="rv d1"><b class="num" data-count="1.24" data-suffix="M" data-dec="2">1.24M</b><span>views in the best week (Sep 14)</span></div>
@@ -672,14 +691,14 @@ window.LEAD_FORM = window.LEAD_FORM || {action:"", map:{}};
   var weeks=[["Jun 29",891655],["Jul 6",1220945],["Jul 13",438656],["Jul 20",355151],["Jul 27",502218],["Aug 3",1061764],["Aug 10",382859],["Aug 17",619974],["Aug 24",340534],["Aug 31",1150614],["Sep 7",764991],["Sep 14",1244164],["Sep 21",740492],["Sep 28",670846],["Oct 5",497293],["Oct 12",327100]];
   var g=document.getElementById('barsG');
   if(g){
-    var W=1200,H=320,top=34,bot=36,n=weeks.length,max=1244164,bw=W/n,gap=10,ns='http://www.w3.org/2000/svg',out='';
+    var nar=innerWidth<700,W=nar?600:1200,H=nar?300:320,top=34,bot=36,n=weeks.length,max=1244164,bw=W/n,gap=nar?6:10,ns='http://www.w3.org/2000/svg',out='';
     weeks.forEach(function(w,i){
       var h=(H-top-bot)*w[1]/max, x=i*bw+gap/2, y=H-bot-h, hi=w[1]>=1000000;
       out+='<rect class="b" x="'+x.toFixed(1)+'" y="'+y.toFixed(1)+'" width="'+(bw-gap).toFixed(1)+'" height="'+h.toFixed(1)+'" fill="'+(hi?'#0034eb':'#c9cfe6')+'" style="transition-delay:'+(i*40)+'ms"/>';
-      if(hi) out+='<text x="'+(x+(bw-gap)/2).toFixed(1)+'" y="'+(y-10).toFixed(1)+'" text-anchor="middle" font-size="17" font-weight="600" fill="#111214">'+(w[1]/1e6).toFixed(2)+'M</text>';
-      if(i%3===0) out+='<text x="'+x.toFixed(1)+'" y="'+(H-10)+'" font-size="15" fill="#55575c">'+w[0]+'</text>';
+      if(hi) out+='<text x="'+(x+(bw-gap)/2).toFixed(1)+'" y="'+(y-10).toFixed(1)+'" text-anchor="middle" font-size="'+(nar?19:17)+'" font-weight="600" fill="#111214">'+(w[1]/1e6).toFixed(2)+'M</text>';
+      var last=nar&&i===n-1;if(i%(nar?5:3)===0||last) out+='<text x="'+(last?(x+bw-gap):x).toFixed(1)+'" y="'+(H-10)+'"'+(last?' text-anchor="end"':'')+' font-size="'+(nar?18:15)+'" fill="#55575c">'+w[0]+'</text>';
     });
-    g.innerHTML=out;
+    g.innerHTML=out;var sv=document.getElementById('barsSvg');if(sv)sv.setAttribute('viewBox','0 0 '+W+' '+H);
   }
 
   /* reveal */
